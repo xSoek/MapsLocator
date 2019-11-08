@@ -3,22 +3,43 @@ package com.example.retomapssave
 import android.location.Geocoder
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
 
 
-class MapsActivity : AppCompatActivity(), OnMapReadyCallback,GoogleMap.OnMarkerClickListener {
+class MapsActivity : AppCompatActivity(), OnMapReadyCallback,GoogleMap.OnMarkerClickListener, GoogleMap.OnMapLongClickListener {
     private lateinit var mMap: GoogleMap
+
+
+    override fun onMapLongClick(point: LatLng) {
+
+        mMap.addMarker(
+            MarkerOptions()
+                .position(point)
+                .title(point.toString())
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
+        )
+        Toast.makeText(
+            applicationContext,
+            "New marker added@$point", Toast.LENGTH_LONG
+        )
+            .show()
+    }
+
+
+
+
+
+
     override fun onMarkerClick(p0: Marker?): Boolean {
-
-
-
         return false
     }
 
@@ -64,6 +85,16 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback,GoogleMap.OnMarkerC
         mMap.uiSettings.isZoomControlsEnabled = true
         mMap.mapType=GoogleMap.MAP_TYPE_HYBRID
 
+<<<<<<< HEAD
+=======
+
+        mMap.setOnMapLongClickListener(this)
+
+
+
+
+
+>>>>>>> 7336c0f50debe9b848a074c5c4cb145bd6a85849
     }
 }
 
