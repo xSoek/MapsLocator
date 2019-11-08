@@ -18,7 +18,7 @@ class NotesListPresenter(val appDatabase: AppDatabase, view: View) {
             locationDao.insert(new)
             val locat = locationDao.getAll()
             withContext(Dispatchers.Main) {
-                view.showNotes(locat)
+                print(showNotes(locat))
             }
 
         }
