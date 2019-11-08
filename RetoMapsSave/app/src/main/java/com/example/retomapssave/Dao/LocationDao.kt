@@ -10,8 +10,8 @@ interface LocationDao {
 
     @Query("SELECT * FROM location")
     //Suspend ejecuta la funcion en segundo plano, de lo contrario petaria el compilador
-    suspend fun getAll(): List<Note>
+    suspend fun getAll(): List<Location>
 
     @Insert
-    suspend fun insert(note: Note)
+    suspend fun insert(location: Location)
 }

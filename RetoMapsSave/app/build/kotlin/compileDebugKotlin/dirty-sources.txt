@@ -1,9 +1,0 @@
-C:\Users\jorge\AndroidStudioProjects\MapsLocator\RetoMapsSave\app\src\main\java\com\example\retomapssave\Dao\AppDatabase.kt
-C:\Users\jorge\AndroidStudioProjects\MapsLocator\RetoMapsSave\app\src\main\java\com\example\retomapssave\MainActivity.kt
-C:\Users\jorge\AndroidStudioProjects\MapsLocator\RetoMapsSave\app\src\main\java\com\example\retomapssave\MapsActivity.kt
-C:\Users\jorge\AndroidStudioProjects\MapsLocator\RetoMapsSave\app\src\main\java\com\example\retomapssave\ui\dashboard\DashboardFragment.kt
-C:\Users\jorge\AndroidStudioProjects\MapsLocator\RetoMapsSave\app\src\main\java\com\example\retomapssave\ui\dashboard\DashboardViewModel.kt
-C:\Users\jorge\AndroidStudioProjects\MapsLocator\RetoMapsSave\app\src\main\java\com\example\retomapssave\ui\home\HomeFragment.kt
-C:\Users\jorge\AndroidStudioProjects\MapsLocator\RetoMapsSave\app\src\main\java\com\example\retomapssave\ui\home\HomeViewModel.kt
-C:\Users\jorge\AndroidStudioProjects\MapsLocator\RetoMapsSave\app\src\main\java\com\example\retomapssave\ui\notifications\NotificationsFragment.kt
-C:\Users\jorge\AndroidStudioProjects\MapsLocator\RetoMapsSave\app\src\main\java\com\example\retomapssave\ui\notifications\NotificationsViewModel.kt

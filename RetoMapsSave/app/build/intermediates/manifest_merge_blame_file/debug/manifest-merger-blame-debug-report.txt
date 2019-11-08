@@ -48,80 +48,88 @@
 31-->C:\Users\jorge\AndroidStudioProjects\MapsLocator\RetoMapsSave\app\src\main\AndroidManifest.xml:15:9-54
 32        android:supportsRtl="true"
 32-->C:\Users\jorge\AndroidStudioProjects\MapsLocator\RetoMapsSave\app\src\main\AndroidManifest.xml:16:9-35
-33        android:theme="@style/AppTheme" >
-33-->C:\Users\jorge\AndroidStudioProjects\MapsLocator\RetoMapsSave\app\src\main\AndroidManifest.xml:17:9-40
-34        <activity
-34-->C:\Users\jorge\AndroidStudioProjects\MapsLocator\RetoMapsSave\app\src\main\AndroidManifest.xml:18:9-20:68
-35            android:name="com.example.retomapssave.MainActivity"
-35-->C:\Users\jorge\AndroidStudioProjects\MapsLocator\RetoMapsSave\app\src\main\AndroidManifest.xml:19:13-41
-36            android:label="@string/title_activity_main" />
-36-->C:\Users\jorge\AndroidStudioProjects\MapsLocator\RetoMapsSave\app\src\main\AndroidManifest.xml:20:13-56
-37        <!--
-38             The API key for Google Maps-based APIs is defined as a string resource.
-39             (See the file "res/values/google_maps_api.xml").
-40             Note that the API key is linked to the encryption key used to sign the APK.
-41             You need a different API key for each encryption key, including the release key that is used to
-42             sign the APK for publishing.
-43             You can define the keys for the debug and release targets in src/debug/ and src/release/.
-44        -->
-45        <meta-data
-45-->C:\Users\jorge\AndroidStudioProjects\MapsLocator\RetoMapsSave\app\src\main\AndroidManifest.xml:29:9-31:55
-46            android:name="com.google.android.geo.API_KEY"
-46-->C:\Users\jorge\AndroidStudioProjects\MapsLocator\RetoMapsSave\app\src\main\AndroidManifest.xml:30:13-58
-47            android:value="@string/google_maps_key" />
-47-->C:\Users\jorge\AndroidStudioProjects\MapsLocator\RetoMapsSave\app\src\main\AndroidManifest.xml:31:13-52
-48
-49        <activity
-49-->C:\Users\jorge\AndroidStudioProjects\MapsLocator\RetoMapsSave\app\src\main\AndroidManifest.xml:33:9-41:20
-50            android:name="com.example.retomapssave.MapsActivity"
-50-->C:\Users\jorge\AndroidStudioProjects\MapsLocator\RetoMapsSave\app\src\main\AndroidManifest.xml:34:13-41
-51            android:label="@string/title_activity_maps" >
-51-->C:\Users\jorge\AndroidStudioProjects\MapsLocator\RetoMapsSave\app\src\main\AndroidManifest.xml:35:13-56
-52            <intent-filter>
-52-->C:\Users\jorge\AndroidStudioProjects\MapsLocator\RetoMapsSave\app\src\main\AndroidManifest.xml:36:13-40:29
-53                <action android:name="android.intent.action.MAIN" />
-53-->C:\Users\jorge\AndroidStudioProjects\MapsLocator\RetoMapsSave\app\src\main\AndroidManifest.xml:37:17-69
-53-->C:\Users\jorge\AndroidStudioProjects\MapsLocator\RetoMapsSave\app\src\main\AndroidManifest.xml:37:25-66
-54
-55                <category android:name="android.intent.category.LAUNCHER" />
-55-->C:\Users\jorge\AndroidStudioProjects\MapsLocator\RetoMapsSave\app\src\main\AndroidManifest.xml:39:17-77
-55-->C:\Users\jorge\AndroidStudioProjects\MapsLocator\RetoMapsSave\app\src\main\AndroidManifest.xml:39:27-74
-56            </intent-filter>
-57        </activity>
-58        <!-- Needs to be explicitly declared on P+ -->
-59        <uses-library
-59-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\jorge\.gradle\caches\transforms-2\files-2.1\6f2450dee3803d33cc01e24127895679\play-services-maps-17.0.0\AndroidManifest.xml:33:9-35:40
-60            android:name="org.apache.http.legacy"
-60-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\jorge\.gradle\caches\transforms-2\files-2.1\6f2450dee3803d33cc01e24127895679\play-services-maps-17.0.0\AndroidManifest.xml:34:13-50
-61            android:required="false" />
-61-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\jorge\.gradle\caches\transforms-2\files-2.1\6f2450dee3803d33cc01e24127895679\play-services-maps-17.0.0\AndroidManifest.xml:35:13-37
-62
-63        <activity
-63-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\jorge\.gradle\caches\transforms-2\files-2.1\3ed4873b139090ace85fcea91c086514\play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
-64            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-64-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\jorge\.gradle\caches\transforms-2\files-2.1\3ed4873b139090ace85fcea91c086514\play-services-base-17.0.0\AndroidManifest.xml:24:13-79
-65            android:exported="false"
-65-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\jorge\.gradle\caches\transforms-2\files-2.1\3ed4873b139090ace85fcea91c086514\play-services-base-17.0.0\AndroidManifest.xml:25:13-37
-66            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-66-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\jorge\.gradle\caches\transforms-2\files-2.1\3ed4873b139090ace85fcea91c086514\play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+33        android:testOnly="true"
+34        android:theme="@style/AppTheme" >
+34-->C:\Users\jorge\AndroidStudioProjects\MapsLocator\RetoMapsSave\app\src\main\AndroidManifest.xml:17:9-40
+35        <activity
+35-->C:\Users\jorge\AndroidStudioProjects\MapsLocator\RetoMapsSave\app\src\main\AndroidManifest.xml:18:9-20:68
+36            android:name="com.example.retomapssave.MainActivity"
+36-->C:\Users\jorge\AndroidStudioProjects\MapsLocator\RetoMapsSave\app\src\main\AndroidManifest.xml:19:13-41
+37            android:label="@string/title_activity_main" />
+37-->C:\Users\jorge\AndroidStudioProjects\MapsLocator\RetoMapsSave\app\src\main\AndroidManifest.xml:20:13-56
+38        <!--
+39             The API key for Google Maps-based APIs is defined as a string resource.
+40             (See the file "res/values/google_maps_api.xml").
+41             Note that the API key is linked to the encryption key used to sign the APK.
+42             You need a different API key for each encryption key, including the release key that is used to
+43             sign the APK for publishing.
+44             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+45        -->
+46        <meta-data
+46-->C:\Users\jorge\AndroidStudioProjects\MapsLocator\RetoMapsSave\app\src\main\AndroidManifest.xml:29:9-31:55
+47            android:name="com.google.android.geo.API_KEY"
+47-->C:\Users\jorge\AndroidStudioProjects\MapsLocator\RetoMapsSave\app\src\main\AndroidManifest.xml:30:13-58
+48            android:value="@string/google_maps_key" />
+48-->C:\Users\jorge\AndroidStudioProjects\MapsLocator\RetoMapsSave\app\src\main\AndroidManifest.xml:31:13-52
+49
+50        <activity
+50-->C:\Users\jorge\AndroidStudioProjects\MapsLocator\RetoMapsSave\app\src\main\AndroidManifest.xml:33:9-41:20
+51            android:name="com.example.retomapssave.MapsActivity"
+51-->C:\Users\jorge\AndroidStudioProjects\MapsLocator\RetoMapsSave\app\src\main\AndroidManifest.xml:34:13-41
+52            android:label="@string/title_activity_maps" >
+52-->C:\Users\jorge\AndroidStudioProjects\MapsLocator\RetoMapsSave\app\src\main\AndroidManifest.xml:35:13-56
+53            <intent-filter>
+53-->C:\Users\jorge\AndroidStudioProjects\MapsLocator\RetoMapsSave\app\src\main\AndroidManifest.xml:36:13-40:29
+54                <action android:name="android.intent.action.MAIN" />
+54-->C:\Users\jorge\AndroidStudioProjects\MapsLocator\RetoMapsSave\app\src\main\AndroidManifest.xml:37:17-69
+54-->C:\Users\jorge\AndroidStudioProjects\MapsLocator\RetoMapsSave\app\src\main\AndroidManifest.xml:37:25-66
+55
+56                <category android:name="android.intent.category.LAUNCHER" />
+56-->C:\Users\jorge\AndroidStudioProjects\MapsLocator\RetoMapsSave\app\src\main\AndroidManifest.xml:39:17-77
+56-->C:\Users\jorge\AndroidStudioProjects\MapsLocator\RetoMapsSave\app\src\main\AndroidManifest.xml:39:27-74
+57            </intent-filter>
+58        </activity>
+59        <!-- Needs to be explicitly declared on P+ -->
+60        <uses-library
+60-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\jorge\.gradle\caches\transforms-2\files-2.1\6f2450dee3803d33cc01e24127895679\play-services-maps-17.0.0\AndroidManifest.xml:33:9-35:40
+61            android:name="org.apache.http.legacy"
+61-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\jorge\.gradle\caches\transforms-2\files-2.1\6f2450dee3803d33cc01e24127895679\play-services-maps-17.0.0\AndroidManifest.xml:34:13-50
+62            android:required="false" />
+62-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\jorge\.gradle\caches\transforms-2\files-2.1\6f2450dee3803d33cc01e24127895679\play-services-maps-17.0.0\AndroidManifest.xml:35:13-37
+63
+64        <service
+64-->[androidx.room:room-runtime:2.2.1] C:\Users\jorge\.gradle\caches\transforms-2\files-2.1\f3f18003fa163081802d111d1b9c364f\room-runtime-2.2.1\AndroidManifest.xml:25:9-27:40
+65            android:name="androidx.room.MultiInstanceInvalidationService"
+65-->[androidx.room:room-runtime:2.2.1] C:\Users\jorge\.gradle\caches\transforms-2\files-2.1\f3f18003fa163081802d111d1b9c364f\room-runtime-2.2.1\AndroidManifest.xml:26:13-74
+66            android:exported="false" />
+66-->[androidx.room:room-runtime:2.2.1] C:\Users\jorge\.gradle\caches\transforms-2\files-2.1\f3f18003fa163081802d111d1b9c364f\room-runtime-2.2.1\AndroidManifest.xml:27:13-37
 67
-68        <meta-data
-68-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\jorge\.gradle\caches\transforms-2\files-2.1\27585a36e7142cd29eb46e51ec40cd0a\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
-69            android:name="com.google.android.gms.version"
-69-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\jorge\.gradle\caches\transforms-2\files-2.1\27585a36e7142cd29eb46e51ec40cd0a\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
-70            android:value="@integer/google_play_services_version" />
-70-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\jorge\.gradle\caches\transforms-2\files-2.1\27585a36e7142cd29eb46e51ec40cd0a\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
-71
-72        <provider
-72-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\jorge\.gradle\caches\transforms-2\files-2.1\f629bab63b95b694d228f1862b76befa\lifecycle-process-2.1.0\AndroidManifest.xml:23:9-27:43
-73            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-73-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\jorge\.gradle\caches\transforms-2\files-2.1\f629bab63b95b694d228f1862b76befa\lifecycle-process-2.1.0\AndroidManifest.xml:24:13-79
-74            android:authorities="com.example.retomapssave.lifecycle-process"
-74-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\jorge\.gradle\caches\transforms-2\files-2.1\f629bab63b95b694d228f1862b76befa\lifecycle-process-2.1.0\AndroidManifest.xml:25:13-69
-75            android:exported="false"
-75-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\jorge\.gradle\caches\transforms-2\files-2.1\f629bab63b95b694d228f1862b76befa\lifecycle-process-2.1.0\AndroidManifest.xml:26:13-37
-76            android:multiprocess="true" />
-76-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\jorge\.gradle\caches\transforms-2\files-2.1\f629bab63b95b694d228f1862b76befa\lifecycle-process-2.1.0\AndroidManifest.xml:27:13-40
-77    </application>
-78
-79</manifest>
+68        <activity
+68-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\jorge\.gradle\caches\transforms-2\files-2.1\3ed4873b139090ace85fcea91c086514\play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+69            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+69-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\jorge\.gradle\caches\transforms-2\files-2.1\3ed4873b139090ace85fcea91c086514\play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+70            android:exported="false"
+70-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\jorge\.gradle\caches\transforms-2\files-2.1\3ed4873b139090ace85fcea91c086514\play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+71            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+71-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\jorge\.gradle\caches\transforms-2\files-2.1\3ed4873b139090ace85fcea91c086514\play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+72
+73        <meta-data
+73-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\jorge\.gradle\caches\transforms-2\files-2.1\27585a36e7142cd29eb46e51ec40cd0a\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+74            android:name="com.google.android.gms.version"
+74-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\jorge\.gradle\caches\transforms-2\files-2.1\27585a36e7142cd29eb46e51ec40cd0a\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+75            android:value="@integer/google_play_services_version" />
+75-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\jorge\.gradle\caches\transforms-2\files-2.1\27585a36e7142cd29eb46e51ec40cd0a\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+76
+77        <provider
+77-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\jorge\.gradle\caches\transforms-2\files-2.1\f629bab63b95b694d228f1862b76befa\lifecycle-process-2.1.0\AndroidManifest.xml:23:9-27:43
+78            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+78-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\jorge\.gradle\caches\transforms-2\files-2.1\f629bab63b95b694d228f1862b76befa\lifecycle-process-2.1.0\AndroidManifest.xml:24:13-79
+79            android:authorities="com.example.retomapssave.lifecycle-process"
+79-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\jorge\.gradle\caches\transforms-2\files-2.1\f629bab63b95b694d228f1862b76befa\lifecycle-process-2.1.0\AndroidManifest.xml:25:13-69
+80            android:exported="false"
+80-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\jorge\.gradle\caches\transforms-2\files-2.1\f629bab63b95b694d228f1862b76befa\lifecycle-process-2.1.0\AndroidManifest.xml:26:13-37
+81            android:multiprocess="true" />
+81-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\jorge\.gradle\caches\transforms-2\files-2.1\f629bab63b95b694d228f1862b76befa\lifecycle-process-2.1.0\AndroidManifest.xml:27:13-40
+82    </application>
+83
+84</manifest>
