@@ -2,6 +2,7 @@ package com.example.retomapssave
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -12,6 +13,12 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
+import android.location.Geocoder
+import androidx.core.app.ComponentActivity.ExtraData
+import androidx.core.content.ContextCompat.getSystemService
+import android.icu.lang.UCharacter.GraphemeClusterBreak.T
+import android.location.Address
+import java.util.*
 
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback,GoogleMap.OnMarkerClickListener, GoogleMap.OnMapLongClickListener {
@@ -20,17 +27,38 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback,GoogleMap.OnMarkerC
 
     override fun onMapLongClick(point: LatLng) {
 
-        mMap.addMarker(
-            MarkerOptions()
-                .position(point)
-                .title(point.toString())
-                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
-        )
+
         Toast.makeText(
             applicationContext,
             "New marker added@$point", Toast.LENGTH_LONG
         )
             .show()
+
+        Log.e("prueba", "$point")
+
+        val geocoder: Geocoder
+        val addresses: List<Address>
+        geocoder = Geocoder(this, Locale.getDefault())
+
+        val latitude = point.latitude
+        val longitude = point.longitude
+
+
+
+        addresses = geocoder.getFromLocation(latitude, longitude, 1)
+
+        Log.e("test","$addresses")
+
+
+
+
+        mMap.addMarker(
+            MarkerOptions()
+                .position(point)
+                .title(addresses.toString() )
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
+        )
+
     }
 
 
@@ -51,6 +79,9 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback,GoogleMap.OnMarkerC
         val mapFragment = supportFragmentManager
             .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
+
+
+
 
 
 
