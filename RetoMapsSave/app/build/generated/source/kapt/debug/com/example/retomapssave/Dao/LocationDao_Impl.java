@@ -30,7 +30,7 @@ public final class LocationDao_Impl implements LocationDao {
     this.__insertionAdapterOfLocation = new EntityInsertionAdapter<Location>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR ABORT INTO `Location` (`id`,`street`) VALUES (nullif(?, 0),?)";
+        return "INSERT OR ABORT INTO `Location` (`id`,`street`,`city`) VALUES (nullif(?, 0),?,?)";
       }
 
       @Override
@@ -40,6 +40,11 @@ public final class LocationDao_Impl implements LocationDao {
           stmt.bindNull(2);
         } else {
           stmt.bindString(2, value.getStreet());
+        }
+        if (value.getCity() == null) {
+          stmt.bindNull(3);
+        } else {
+          stmt.bindString(3, value.getCity());
         }
       }
     };
@@ -73,6 +78,7 @@ public final class LocationDao_Impl implements LocationDao {
         try {
           final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
           final int _cursorIndexOfStreet = CursorUtil.getColumnIndexOrThrow(_cursor, "street");
+          final int _cursorIndexOfCity = CursorUtil.getColumnIndexOrThrow(_cursor, "city");
           final List<Location> _result = new ArrayList<Location>(_cursor.getCount());
           while(_cursor.moveToNext()) {
             final Location _item;
@@ -80,7 +86,9 @@ public final class LocationDao_Impl implements LocationDao {
             _tmpId = _cursor.getInt(_cursorIndexOfId);
             final String _tmpStreet;
             _tmpStreet = _cursor.getString(_cursorIndexOfStreet);
-            _item = new Location(_tmpId,_tmpStreet);
+            final String _tmpCity;
+            _tmpCity = _cursor.getString(_cursorIndexOfCity);
+            _item = new Location(_tmpId,_tmpStreet,_tmpCity);
             _result.add(_item);
           }
           return _result;

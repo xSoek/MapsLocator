@@ -1,5 +1,6 @@
 package com.example.retomapssave
 
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -18,6 +19,15 @@ import androidx.core.app.ComponentActivity.ExtraData
 import androidx.core.content.ContextCompat.getSystemService
 import android.icu.lang.UCharacter.GraphemeClusterBreak.T
 import android.location.Address
+import android.location.Location
+import com.example.persistence.data.local.AppDatabase
+import com.example.persistence.data.local.DatabaseFactor
+import com.example.retomapssave.Dao.LocationDao
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import java.security.acl.LastOwnerException
 import java.util.*
 
 
@@ -43,14 +53,14 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback,GoogleMap.OnMarkerC
         val latitude = point.latitude
         val longitude = point.longitude
 
-
-
         addresses = geocoder.getFromLocation(latitude, longitude, 1)
+        println("ESTO ES " + addresses)
 
-        Log.e("test","$addresses")
+        CoroutineScope(Dispatchers.IO).launch {
+            var miLoc = addresses[0].featureName
+            var miLocLocality = addresses[0].locality
 
-
-
+        }
 
         mMap.addMarker(
             MarkerOptions()
@@ -97,21 +107,21 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback,GoogleMap.OnMarkerC
      * it inside the SupportMapFragment. This method will only be triggered once the user has
      * installed Google Play services and returned to the app.
      */
+
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
 
         // Add a marker in Sydney and move the camera
 
+
+
+        mMap.setOnMapClickListener () {
+            print(mMap.cameraPosition)
+        }
         mMap.setOnMarkerClickListener(this)
         mMap.uiSettings.isZoomControlsEnabled = true
         mMap.mapType=GoogleMap.MAP_TYPE_HYBRID
-
-
         mMap.setOnMapLongClickListener(this)
-
-
-
-
-
     }
 }
+
