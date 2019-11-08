@@ -1258,6 +1258,7 @@ id enterAlwaysCollapsed
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
+id fab
 id fill
 id fill_horizontal
 id fill_vertical
@@ -1389,6 +1390,7 @@ id time
 id title
 id titleDividerNoCustom
 id title_template
+id toolbar
 id top
 id topPanel
 id touch_outside
@@ -1464,8 +1466,10 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_first
 layout activity_main
 layout activity_maps
+layout content_first
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog

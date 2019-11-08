@@ -19,6 +19,15 @@ import androidx.core.app.ComponentActivity.ExtraData
 import androidx.core.content.ContextCompat.getSystemService
 import android.icu.lang.UCharacter.GraphemeClusterBreak.T
 import android.location.Address
+import android.location.Location
+import com.example.persistence.data.local.AppDatabase
+import com.example.persistence.data.local.DatabaseFactor
+import com.example.retomapssave.Dao.LocationDao
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import java.security.acl.LastOwnerException
 import java.util.*
 
 
@@ -44,14 +53,14 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback,GoogleMap.OnMarkerC
         val latitude = point.latitude
         val longitude = point.longitude
 
-
-
         addresses = geocoder.getFromLocation(latitude, longitude, 1)
+        println("ESTO ES " + addresses)
 
-        Log.e("test","$addresses")
+        CoroutineScope(Dispatchers.IO).launch {
+            var miLoc = addresses[0].featureName
+            var miLocLocality = addresses[0].locality
 
-
-
+        }
 
         mMap.addMarker(
             MarkerOptions()
