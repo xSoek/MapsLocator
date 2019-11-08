@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 #Fri Nov 08 13:08:24 CET 2019
 base.0=C\:\\Users\\jorge\\AndroidStudioProjects\\MapsLocator\\RetoMapsSave\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+=======
+#Fri Nov 08 13:19:58 CET 2019
+base.0=C\:\\Users\\freer\\AndroidStudioProjects\\MapsLocator\\RetoMapsSave\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+>>>>>>> 5a2fdb26bc310e99f067d50e0f9cd94f2f7370b7
 path.0=classes.dex
 renamed.0=classes.dex

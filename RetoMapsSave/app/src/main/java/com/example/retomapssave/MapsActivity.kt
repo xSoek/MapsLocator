@@ -9,12 +9,24 @@ import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
+<<<<<<< HEAD
 import com.google.android.gms.maps.model.LatLngBounds
+=======
+import com.google.android.gms.maps.model.Marker
+>>>>>>> 5a2fdb26bc310e99f067d50e0f9cd94f2f7370b7
 import com.google.android.gms.maps.model.MarkerOptions
 
-class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
+class MapsActivity : AppCompatActivity(), OnMapReadyCallback,GoogleMap.OnMarkerClickListener {
     private lateinit var mMap: GoogleMap
+    override fun onMarkerClick(p0: Marker?): Boolean {
+
+
+
+        return false
+    }
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,6 +35,10 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         val mapFragment = supportFragmentManager
             .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
+
+
+
+
     }
 
     /**
@@ -44,9 +60,23 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
 
+<<<<<<< HEAD
         mMap.setOnMapClickListener () {
             print(mMap.cameraPosition)
         }
+=======
+        mMap.setOnMarkerClickListener(this)
+        mMap.uiSettings.isZoomControlsEnabled = true
+        mMap.mapType=GoogleMap.MAP_TYPE_HYBRID
+
+
+
+        
+
+
+
+
+>>>>>>> 5a2fdb26bc310e99f067d50e0f9cd94f2f7370b7
     }
 }
 
